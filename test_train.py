@@ -1,5 +1,5 @@
 from unittest import TestCase
-from training import clean_data
+from train import clean_data
 import pandas as pd
 
 class TestTrain(TestCase):

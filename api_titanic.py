@@ -2,7 +2,7 @@ import joblib
 import uvicorn
 from fastapi import FastAPI
 import pandas as pd
-import training
+import train
 
 app = FastAPI()
 
