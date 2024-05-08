@@ -2,6 +2,7 @@ import joblib
 import uvicorn
 from fastapi import FastAPI
 import pandas as pd
+import training
 
 app = FastAPI()
 
@@ -10,7 +11,6 @@ app = FastAPI()
 def prediction_api(pclass: int, sex: int, age: int) -> bool:
     # Load model
     titanic_model = joblib.load("model_titanic.joblib")
-
     # predict
     x = [pclass, sex, age]
     prediction = titanic_model.predict(pd.DataFrame(x).transpose())
