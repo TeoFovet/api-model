@@ -12,7 +12,7 @@ def clean_data(df : pd.DataFrame) -> pd.DataFrame:
     # suppression des lignes avec des valeurs manquantes
     df.dropna(axis = 0, inplace = True)
     # remplacement des valeurs non numeriques par des valeurs numeriques
-    df = df.replace('male', 1).replace('female', 0)
+    df = df.replace('male', 0).replace('female', 1)
     return df
 
 def train_model(df: pd.DataFrame) -> ClassifierMixin:
