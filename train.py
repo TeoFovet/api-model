@@ -32,4 +32,4 @@ if __name__ == '__main__':
     df = ingest_data('titanic.xls')
     df = clean_data(df)
     model = train_model(df)
-    joblib.dump(model, filename = 'model_titanic.joblil')
+    joblib.dump(model, filename = 'model_titanic.joblib')
